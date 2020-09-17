@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        div{
+            width:156px;
+            height:36px;
+            border:4px solid #FA8072;
+            padding: 10px;
+
+            background-color : #FA8072;
+            border-radius : 5px;
+
+            text-align:center;
+            vertical-align:middle;
+            font-size: 36px;
+            font-weight: 1000;
+            color:aliceblue;
+            font-family: 'Lobster', cursive;
+        }
+
+        p{
+            font-size: 12px;
+            margin:0;
+            padding:0;
+
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>일본유학생활</p>
+        <script>
+            //When is D-day?
+            let day = new Date("2018-03-26");
+            let today = new Date();
+            let temp = 24*60*60*1000;
+            
+    
+            // Calculate Dday
+            let dday = (today - day)/temp;
+
+            let mathSymbol;
+            if(dday>0){
+                mathSymbol = '+';
+                dday = Math.ceil(dday);
+            }
+            else if(dday<0){
+                mathSymbol = '';
+                dday = Math.round(dday);
+            }
+            //Dday 당일은 어떻게 처리하지??
+
+            let space=' ';
+
+            document.write(`D${mathSymbol}${dday}`);
+        </script>
+    </div>
+</body>
+</html>
