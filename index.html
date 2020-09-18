@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>D-Day Widget</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <style>
-        div{
-            width:156px;
+        body{
+            margin: 0;
+            white-space:normal;
+            width:170px;
             height:36px;
+        }
+        div{
             border:4px solid #FA8072;
-            padding: 10px;
-
+            padding: 5px;
             background-color : #FA8072;
             border-radius : 5px;
 
@@ -25,21 +28,24 @@
         }
 
         p{
-            font-size: 12px;
             margin:0;
             padding:0;
+            display:top;
 
             font-family: 'Nanum Gothic', sans-serif;
+            font-size: 8px;
         }
+
 
     </style>
 </head>
 <body>
     <div>
-        <p>일본유학생활</p>
+        <p>일본유학온지</p>
         <script>
             //When is D-day?
-            let dday = new Date("September 18, 2020 00:00:00").getTime();
+            //let dday = new Date("September 18 2020 00:00:00").getTime();
+            let dday = new Date("March 26 2018 00:00:00").getTime();
             let today = new Date().getTime();
 
             // Calculate Dday
