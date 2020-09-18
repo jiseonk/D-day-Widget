@@ -31,6 +31,7 @@
 
             font-family: 'Nanum Gothic', sans-serif;
         }
+
     </style>
 </head>
 <body>
@@ -38,28 +39,31 @@
         <p>일본유학생활</p>
         <script>
             //When is D-day?
-            let day = new Date("2018-03-26");
-            let today = new Date();
-            let temp = 24*60*60*1000;
-            
-    
+            let dday = new Date("September 18, 2020 00:00:00").getTime();
+            let today = new Date().getTime();
+
             // Calculate Dday
-            let dday = (today - day)/temp;
+            let tmp = 24*60*60*1000;
+            let ddayCount = (today - dday)/tmp;
 
             let mathSymbol;
-            if(dday>0){
-                mathSymbol = '+';
-                dday = Math.ceil(dday);
-            }
-            else if(dday<0){
+            if(ddayCount>0){
+                ddayCount = Math.ceil(ddayCount);
+                if(ddayCount === 1){
+                    mathSymbol = '-';
+                    ddayCount = 'day';
+                } else {
+                    mathSymbol = '+';
+                }
+            } else if(ddayCount<0){
                 mathSymbol = '';
-                dday = Math.round(dday);
-            }
+                ddayCount = Math.floor(ddayCount);
+            } 
             //Dday 당일은 어떻게 처리하지??
 
             let space=' ';
 
-            document.write(`D${mathSymbol}${dday}`);
+            document.write(`D${mathSymbol}${ddayCount}`);
         </script>
     </div>
 </body>
